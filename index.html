@@ -25,8 +25,9 @@
 <!-- Verifikasi & Pengaturan Browser -->
 
 <meta name="screen-orientation" content="auto" />
-
-<!-- Favicon / Icon Website -->
+<meta property="og:image" content="LINK_GAMBAR" />
+<meta property="og:url" content="URL_WEBSITE" />
+<link rel="icon" href="favicon.png">
 
 
     <style>
@@ -984,7 +985,9 @@ async function loadAllData(){
 
     const data =
       await response.json();
-
+if(!response.ok){
+  throw new Error("API gagal");
+}
     console.log(data);
 
     document.getElementById("visit-counter")
@@ -1732,25 +1735,14 @@ function getSheetByGid(gid){
 
       return sheets[i]
         .getDataRange()
-        getDisplayValues();
+        .getDisplayValues();
     }
   }
 
   return [];
 }
 
-/* ======================
-ESCAPE HTML
-====================== */
 
-function escapeHtml(text){
-
-  return String(text || "")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;");
-}
 
 /* ======================
 START
