@@ -961,7 +961,7 @@ and (max-width:950px){
 <script>
 
 const apiUrl =
-"https://script.google.com/macros/s/AKfycbxHwDzzeut69TGYhgAg2X-fLPAoZqytOguhCf2SFg9k0Q9cMGGUOxjDC4dxtNhHlFFrzw/exec";
+"https://script.google.com/macros/s/AKfycbzPYzl_KK_IEFKwFElBGlo7s1b43xiehxN4Q_G1vb2iAFN-Yukx3In0cYvm1zVt3O4jJw/exec";
 
 
 const spreadsheetId =
@@ -1020,29 +1020,34 @@ async function loadAllData(){
       "siswaContainer"
     );
 
-cekDanMunculkanTombol();
+const container = document.getElementById("tombol-dinamis-container");
+    container.innerHTML = ""; // Bersihkan kontainer di awal
 
-  }catch(err){
+    // Cek apakah data.link ada isinya (tidak kosong)
+    if (data.link) { 
+      const btn = document.createElement("button");
+      btn.innerHTML = "🔗 Buka Tautan Otomatis";
+      btn.style.background = "linear-gradient(135deg, #11998e, #38ef7d)";
+      btn.style.boxShadow = "0 8px 20px rgba(56,239,125,.25)";
+      btn.style.marginBottom = "15px";
+      
+      // Jika tombol diklik, langsung buka url tersebut di tab baru
+      btn.onclick = function() {
+        window.open(data.link, '_blank');
+      };
+      
+      // Masukkan tombol ke dalam kontainer HTML
+      container.appendChild(btn);
+    } else {
+      console.log("Tombol kosong/putih semata karena tidak ada link di spreadsheet.");
+    }
 
+  } catch(err) {
     console.error(err);
-
-    document.getElementById("caption")
-      .textContent =
-      "❌ Gagal memuat data";
+    document.getElementById("caption").textContent = "❌ Gagal memuat data";
   }
-}
-    
-    
-  }catch(err){
-
-    console.error(err);
-
-    document.getElementById("caption")
-      .textContent =
-      "❌ Gagal memuat data";
-  }
-}
-
+} 
+  
 /* ======================
 FOTO
 ====================== */
