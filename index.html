@@ -1,0 +1,1799 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>📚 Perpustakaan SDN Balimester 06 – Ki Hajar Dewantara</title>
+
+    <!-- SEO / Open Graph -->
+    
+    <!-- Meta Tag Standar & SEO (Wajib ditaruh paling atas) -->
+<meta name="description" content="Perpustakaan digital SDN Balimester 06 Jakarta – Koleksi kegiatan pembelajaran mendalam untuk murid dan guru." />
+<meta name="keywords" content="Perpustakaan SDN Balimester 06, perpustakaan digital, SD Balimester, Ki Hajar Dewantara" />
+<meta name="author" content="SDN Balimester 06" />
+
+<!-- Facebook / Open Graph (Dipakai saat link di-share) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://perpustakaan-sdn-balimester-06.netlify.app/" />
+<meta property="og:title" content="📚 Perpustakaan SDN Balimester 06 – Ki Hajar Dewantara" />
+<meta property="og:description" content="Koleksi kegiatan pembelajaran mendalam untuk murid dan guru." />
+<!-- REKOMENDASI: Ganti link Imgur ke link internal website Netlify kamu jika masih eror hitam -->
+<meta property="og:image" content="https://perpustakaan-sdn-balimester-06.netlify.app/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Verifikasi & Pengaturan Browser -->
+<meta name="google-site-verification" content="ZFP0L3c8qQJ0b0rnc3Y43aGkYopDbKEsHu6liBI5tSg" />
+<meta name="screen-orientation" content="auto" />
+
+<!-- Favicon / Icon Website -->
+<link rel="icon" href="https://perpustakaan-sdn-balimester-06.netlify.app/favicon.png" type="image/png" />
+
+    <link rel="icon" href="https://i.imgur.com/XXXXX.png" type="image/png" />
+
+    <style>
+      /* === RESPONSIVE TAMBAHAN UNTUK HP DAN TABLET === */
+/* =========================================================
+   ROOT / WARNA DASAR
+========================================================= */
+
+:root{
+  --primary1:#667eea;
+  --primary2:#764ba2;
+
+  --dark:#243447;
+  --light:#ffffff;
+  --soft:#f5f7fb;
+
+  --border:#e8e8e8;
+
+  --shadow:
+    0 10px 30px rgba(0,0,0,.10);
+
+  --radius:22px;
+}
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  min-height:100vh;
+
+  font-family:
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+  color:var(--dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary1),
+      var(--primary2)
+    );
+
+  overflow-x:hidden;
+
+  line-height:1.7;
+}
+
+/* =========================================================
+   SCROLLBAR PREMIUM
+========================================================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#f1f1f1;
+}
+
+::-webkit-scrollbar-thumb{
+  background:
+    linear-gradient(
+      var(--primary1),
+      var(--primary2)
+    );
+
+  border-radius:20px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  background:
+    rgba(255,255,255,.96);
+
+  backdrop-filter:blur(10px);
+
+  text-align:center;
+
+  padding:1.4rem 1rem;
+
+  position:sticky;
+
+  top:0;
+
+  z-index:999;
+
+  box-shadow:
+    0 2px 20px rgba(0,0,0,.08);
+}
+
+header h1{
+  font-size:2rem;
+
+  font-weight:800;
+
+  line-height:1.4;
+
+  color:var(--dark);
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.container{
+  width:min(95%,1100px);
+
+  margin:1.5rem auto;
+
+  padding:1.5rem;
+
+  border-radius:28px;
+
+  background:
+    rgba(255,255,255,.96);
+
+  backdrop-filter:blur(8px);
+
+  box-shadow:var(--shadow);
+
+  overflow:hidden;
+
+  animation:fadeUp .7s ease;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,h2,h3,h4{
+  color:var(--dark);
+}
+
+h2{
+  text-align:center;
+
+  font-size:2rem;
+
+  margin-bottom:1.2rem;
+
+  font-weight:800;
+}
+
+h3{
+  margin-bottom:.8rem;
+}
+
+p{
+  margin-bottom:.8rem;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+button{
+  width:min(100%,500px);
+
+  display:block;
+
+  margin:12px auto;
+
+  padding:1rem 1.2rem;
+
+  border:none;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary1),
+      var(--primary2)
+    );
+
+  color:#fff;
+
+  font-size:1.1rem;
+
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(102,126,234,.25);
+}
+
+button:hover{
+  transform:
+    translateY(-3px)
+    scale(1.01);
+
+  box-shadow:
+    0 12px 28px rgba(102,126,234,.35);
+}
+
+button:active{
+  transform:scale(.98);
+}
+
+/* =========================================================
+   GAMBAR
+========================================================= */
+
+img{
+  max-width:100%;
+  height:auto;
+}
+
+/* =========================================================
+   GALERI FOTO
+========================================================= */
+
+#viewer{
+  width:100%;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:24px;
+
+  background:#f4f4f4;
+
+  margin:1rem auto;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.10);
+}
+
+#photo{
+  width:100%;
+
+  height:auto;
+
+  display:block;
+
+  object-fit:contain;
+
+  transition:
+    transform .4s ease,
+    filter .4s ease;
+}
+
+#photo:hover{
+  transform:scale(1.01);
+
+  filter:brightness(1.02);
+}
+
+#caption{
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  padding:1rem;
+
+  text-align:center;
+
+  color:#fff;
+
+  font-size:1rem;
+
+  font-weight:600;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.55)
+    );
+
+  
+}
+
+/* =========================================================
+   PENGUMUMAN
+========================================================= */
+
+#announcement-box{
+  background:#fff;
+
+  border-radius:24px;
+
+  border:1px solid var(--border);
+
+  padding:1.3rem;
+
+  margin-top:1.5rem;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.05);
+}
+
+.announcement-item{
+  background:#fafafa;
+
+  border-left:8px solid var(--primary1);
+
+  border-radius:18px;
+
+  padding:1.2rem;
+
+  margin-bottom:1rem;
+
+  transition:.3s ease;
+}
+
+.announcement-item:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,.08);
+}
+
+.announcement-title{
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary1),
+      var(--primary2)
+    );
+
+  color:#fff;
+
+  text-align:center;
+
+  font-size:1.5rem;
+
+  font-weight:800;
+
+  padding:14px;
+
+  border-radius:14px;
+
+  margin-bottom:1rem;
+
+  line-height:1.5;
+}
+
+.announcement-content{
+  font-size:1.05rem;
+
+  line-height:1.9;
+
+  color:#333;
+}
+
+.announcement-content p{
+  white-space:pre-wrap;
+}
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.search-box{
+  width:100%;
+
+  padding:1rem 1.1rem;
+
+  border-radius:14px;
+
+  border:2px solid #dce5f5;
+
+  font-size:1rem;
+
+  outline:none;
+
+  transition:.3s ease;
+
+  margin-bottom:1rem;
+}
+
+.search-box:focus{
+  border-color:var(--primary1);
+
+  box-shadow:
+    0 0 0 4px rgba(102,126,234,.12);
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-wrapper{
+  overflow-x:auto;
+
+  border-radius:20px;
+
+  margin-top:1rem;
+
+  background:#fff;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.05);
+}
+
+table{
+  width:100%;
+
+  min-width:700px;
+
+  border-collapse:collapse;
+}
+
+th{
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary1),
+      var(--primary2)
+    );
+
+  color:#fff;
+
+  padding:14px;
+
+  font-size:1rem;
+
+  text-align:left;
+}
+
+td{
+  padding:12px;
+}
+
+tr:nth-child(even){
+  background:#f8faff;
+}
+
+tr:hover{
+  background:#eef3ff;
+}
+
+/* =========================================================
+   GRID BUKU
+========================================================= */
+
+.book-grid{
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(170px,1fr));
+
+  gap:18px;
+
+  margin-top:1.5rem;
+}
+
+.book-item{
+  background:#fff;
+
+  border-radius:18px;
+
+  padding:12px;
+
+  text-align:center;
+
+  transition:.3s ease;
+
+  box-shadow:
+    0 5px 18px rgba(0,0,0,.06);
+}
+
+.book-item:hover{
+  transform:translateY(-5px);
+}
+
+.book-grid a img{
+  width:100%;
+
+  aspect-ratio:1/1;
+
+  object-fit:contain;
+
+  border-radius:14px;
+
+  background:#f7f7f7;
+
+  padding:10px;
+}
+
+/* =========================================================
+   EMBED / IFRAME UMUM
+========================================================= */
+
+iframe{
+  max-width:100%;
+
+  border:none;
+
+  border-radius:22px;
+
+  background:#fff;
+
+  box-shadow:
+    0 10px 28px rgba(0,0,0,.12);
+}
+
+.embed-box{
+  width:100%;
+
+  overflow:hidden;
+
+  border-radius:22px;
+
+  background:#fff;
+
+  padding:10px;
+
+  margin:1.5rem auto;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.08);
+}
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.video-item{
+  margin:2rem auto;
+
+  text-align:center;
+}
+
+.video-item iframe{
+  width:100%;
+
+  max-width:950px;
+
+  aspect-ratio:16/9;
+
+  background:#000;
+}
+
+/* =========================================================
+   PDF VIEWER
+========================================================= */
+
+.pdf-frame{
+  width:100%;
+
+  height:90vh;
+
+  border:none;
+}
+
+/* =========================================================
+   LOOKER STUDIO
+========================================================= */
+
+.looker-frame{
+  width:100%;
+
+  height:85vh;
+
+  border:none;
+}
+
+/* =========================================================
+   GAME FRAME
+========================================================= */
+
+.game-frame{
+  position:relative;
+
+  width:100%;
+
+  max-width:950px;
+
+  aspect-ratio:4/3;
+
+  margin:auto;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.15);
+}
+
+.game-frame iframe{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.hidden{
+  display:none !important;
+}
+
+.loading{
+  text-align:center;
+
+  color:#666;
+
+  font-style:italic;
+}
+
+.spacer{
+  height:25px;
+}
+
+/* =========================================================
+   ANIMASI
+========================================================= */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:1024px){
+
+  header h1{
+    font-size:1.8rem;
+  }
+
+  h2{
+    font-size:1.7rem;
+  }
+
+  .container{
+    width:96%;
+    padding:1.2rem;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:768px){
+
+  header{
+    padding:1rem;
+  }
+
+  header h1{
+    font-size:1.45rem;
+    line-height:1.5;
+  }
+
+  .container{
+    width:95%;
+
+    margin:1rem auto;
+
+    padding:1rem;
+
+    border-radius:20px;
+  }
+
+  h2{
+    font-size:1.5rem;
+  }
+
+  button{
+    width:100%;
+
+    font-size:1rem;
+  }
+
+  .announcement-title{
+    font-size:1.2rem;
+  }
+
+  .announcement-content{
+    font-size:1rem;
+  }
+
+  table{
+    min-width:600px;
+  }
+
+  th,td{
+    padding:10px;
+
+    font-size:.92rem;
+  }
+
+  .pdf-frame{
+    height:75vh;
+  }
+
+  .looker-frame{
+    height:70vh;
+  }
+}
+
+/* =========================================================
+   PORTRAIT
+========================================================= */
+
+@media (orientation:portrait){
+
+  #photo{
+    max-height:75vh;
+  }
+
+  .book-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+/* =========================================================
+   LANDSCAPE MOBILE
+========================================================= */
+
+@media (orientation:landscape)
+and (max-width:950px){
+
+  header h1{
+    font-size:1.2rem;
+  }
+
+  .container{
+    width:96%;
+  }
+
+  #photo{
+    max-height:88vh;
+  }
+
+  .book-grid{
+    grid-template-columns:
+      repeat(4,1fr);
+  }
+
+  .looker-frame{
+    height:100vh;
+  }
+
+  button{
+    max-width:450px;
+  }
+}
+
+    </style>
+    
+  </head>
+
+  <body>
+
+    <header>
+      <h1>📚 Ki Hajar Dewantara – Perpustakaan SDN Balimester 06</h1>
+    </header>
+
+    <!-- BERANDA -->
+    <div class="container" id="home-section">
+      <h2>Beranda</h2>
+
+      <div id="viewer" title="Klik kiri untuk foto sebelumnya, klik kanan untuk berikutnya (di area foto). Ketuk untuk berpindah di HP.">
+        <img id="photo" src="" alt="Foto tidak tersedia" />
+        <div id="caption">Memuat foto...</div>
+      </div>
+
+      <div id="announcement-box">
+<h3>📢 Pengumuman</h3>
+
+<div id="pengumuman">
+<p class="loading">Memuat pengumuman...</p>
+</div>
+</div>     
+  
+      <div style="text-align:center; margin-top:1rem;">
+        <button onclick="showDataMenu()">➡️ Lihat Data</button>
+        <button onclick="exitApp()">🚪 Exit</button>
+        <p>
+    🎉 Total Kunjungan: <span id="visit-counter" style="margin-top:0.6rem; font-weight:700;">Memuat...</span>
+</p>
+      </div>
+    </div>
+
+   
+
+
+    <!-- MENU DATA -->
+    <div class="container hidden" id="menu-section">
+      <h2>Pilih Menu Data</h2>
+
+      <div style="text-align:center;">
+        <button onclick="loadSheet('1359128462','Buku Perpustakaan')">📚 Buku Perpustakaan</button>
+        <button onclick="loadSheet('1332730954','Piket & Jadwal')">📅 Piket & Jadwal</button>
+        <button onclick="loadSheet('1302478828','Audit Perpustakaan')">📊 Audit Perpustakaan</button>
+        <button onclick="loadSheet('113533785','Balikin')">🔁 Balikin</button>
+        <button onclick="loadSheet('2038066723','Pinjam')">📖 Pinjam</button>
+        <button onclick="window.open('https://forms.gle/oYp9yWey4fa6wSpt7','_blank')">📝 Form Pinjam Buku</button>
+        <button onclick="Latihan()">📘 Halaman Latihan</button>
+        <button onclick="btnMain()">🎮 Mari Bermain Scratch</button>
+
+      </div>
+
+      <hr style="margin:1rem 0; border:none; border-top:1px solid #eee;">
+
+      <h3>Menu Buku Digital</h3>
+      <div style="text-align:center; font-size:1.7rem">
+        <button onclick="btnTeks()">📘 Buku Teks</button>
+        <button onclick="btnSiswa()">📗 Buku Cerita</button>
+        
+
+      </div>
+
+      
+
+      <h4 style="margin-top:1rem;">🎥 Daftar Video Pembelajaran</h4>
+      <div id="videoList">Memuat data...</div>
+
+      <div style="text-align:center; margin-top:1rem;">
+        <button onclick="showPage('home-section')">🏠 Kembali ke Beranda</button>
+      </div>
+    </div>
+
+    <!-- DATA -->
+    <div class="container hidden" id="data-section">
+
+      <h2 id="menu-title">Data</h2>
+
+      <input type="text" id="search-box" class="search-box" placeholder="🔍 Cari data..." onkeyup="filterTable()" />
+      <div id="info"></div>
+
+      <div class="table-wrapper" id="table-container">Memuat...</div>
+
+      <div style="text-align:center; margin-top:1rem;">
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+          <button onclick="backToMenu()">⬅️ Kembali ke Menu</button>
+          <button onclick="showPage('home-section')">🏠 Kembali ke Beranda</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HALAMAN LATIHAN -->
+    <div class="container hidden" id="latihanPage">
+      <h2>📘 Halaman Latihan</h2>
+      
+      <div id="kelasContainer"></div>
+      <div id="mapelContainer" class="hidden"></div>
+      <div id="judulContainer" class="hidden"></div>
+      <div id="linkContainer" class="hidden"></div>
+
+      <div style="text-align:center; margin-top:1rem;">
+        <div style="display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
+          <button onclick="backToMenu()">⬅️ Kembali ke Menu</button>
+          <button onclick="showPage('home-section')">🏠 Beranda</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HALAMAN SOAL -->
+    <div class="container hidden" id="soalPage">
+      <h2>📖 Daftar Soal Latihan</h2>
+      <div id="soalContainer">Memuat daftar soal...</div>
+      <div style="text-align:center; margin-top:1rem;">
+        <button onclick="showPage('latihanPage')">⬅️ Kembali ke Halaman Latihan</button>
+      </div>
+    </div>
+
+<!-- HALAMAN GAME -->
+    <div class="container hidden" id="gamePage">
+      <h2>🎮 Mari Bermain Scratch</h2>
+      <div id="gameContainer">Memuat game...</div>
+      <button onclick="backToMenu()">⬅️ Kembali ke Menu</button>
+    </div>
+
+
+<!-- HALAMAN BUKU TEKS -->
+    <div class="container hidden" id="teksPage">
+      <h2>📗 Buku Teks</h2>
+      <div id="teksContainer">Memuat buku TEKS...</div>
+      <button onclick="backToMenu()">⬅️ Kembali ke Menu</button>
+    </div>
+
+
+<!-- HALAMAN BUKU SISWA -->
+    <div class="container hidden" id="siswaPage">
+      <h2>📗 Buku Cerita</h2>
+      <div id="siswaContainer">Memuat buku fiksi...</div>
+      <button onclick="backToMenu()">⬅️ Kembali ke Menu</button>
+    </div>
+
+<script>
+
+const apiUrl =
+"https://script.google.com/macros/s/AKfycbxHwDzzeut69TGYhgAg2X-fLPAoZqytOguhCf2SFg9k0Q9cMGGUOxjDC4dxtNhHlFFrzw/exec";
+
+
+const spreadsheetId =
+"14V4eCElJUCjix2n3-BaYwjj38PmcWyNfLsYxi-szJYY";
+
+/* ======================
+GLOBAL
+====================== */
+
+let photos = [];
+let photoIndex = 0;
+let gamesData = [];
+let latihanData = [];
+let selectedKelas = "";
+let selectedMapel = ""; 
+
+/* ======================
+LOAD DATA
+====================== */
+
+async function loadAllData(){
+
+  try{
+
+    const response =
+      await fetch(apiUrl);
+
+    const data =
+      await response.json();
+
+    console.log(data);
+
+    document.getElementById("visit-counter")
+      .textContent =
+      data.totalKunjungan || 0;
+
+    photos = data.foto || [];
+
+    if(photos.length){
+      showPhoto(0);
+    }
+
+    loadAnnouncements(data);
+
+    loadVideos();
+
+    gamesData = data.games || [];
+
+    renderBooks(
+      data.bukuTeks || [],
+      "teksContainer"
+    );
+
+    renderBooks(
+      data.bukuSiswa || [],
+      "siswaContainer"
+    );
+
+  }catch(err){
+
+    console.error(err);
+
+    document.getElementById("caption")
+      .textContent =
+      "❌ Gagal memuat data";
+  }
+}
+
+/* ======================
+FOTO
+====================== */
+
+function showPhoto(index){
+
+  if(!photos.length) return;
+
+  if(index < 0){
+    index = photos.length - 1;
+  }
+
+  if(index >= photos.length){
+    index = 0;
+  }
+
+  photoIndex = index;
+
+  document.getElementById("photo").src =
+    photos[index].url;
+
+  document.getElementById("caption").textContent =
+    photos[index].name || "";
+}
+
+function nextPhoto(){
+  showPhoto(photoIndex + 1);
+}
+
+function prevPhoto(){
+  showPhoto(photoIndex - 1);
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+  document
+    .getElementById("viewer")
+    .addEventListener("click",e=>{
+
+      const rect =
+        e.currentTarget.getBoundingClientRect();
+
+      const x =
+        e.clientX - rect.left;
+
+      if(x > rect.width/2){
+        nextPhoto();
+      }else{
+        prevPhoto();
+      }
+    });
+});
+
+/* ======================
+PENGUMUMAN
+====================== */
+
+function loadAnnouncements(data){
+
+  const container =
+    document.getElementById("pengumuman");
+
+  const items =
+    data.pengumuman || [];
+
+  if(!items.length){
+    container.innerHTML = "Tidak ada pengumuman";
+    return;
+  }
+
+  container.innerHTML = items.map(item => `
+
+    <div class="announcement-item">
+
+      <div class="announcement-title">
+        ${escapeHtml(item.title)}
+      </div>
+
+      <div class="announcement-content">
+        ${escapeHtml(item.content).replace(/\n/g, "<br>")}
+      </div>
+
+    </div>
+
+  `).join("");
+}
+
+/* ======================
+VIDEO
+====================== */
+
+function loadVideos() {
+
+  const container = document.getElementById('videoList');
+  container.innerHTML = "Memuat video...";
+
+  fetch(apiUrl + "?action=videos")
+    .then(res => res.json())
+    .then(data => {
+
+      const videos = data.videos || [];
+      container.innerHTML = '';
+
+      if (!videos.length) {
+        container.innerHTML = '<p>Tidak ada video ditemukan.</p>';
+        return;
+      }
+
+      videos.forEach(v => {
+
+        const div = document.createElement('div');
+        div.className = 'video-item';
+
+        div.innerHTML = `
+          <h3>${escapeHtml(v.title || 'Video')}</h3>
+          <iframe src="${v.url}" allowfullscreen></iframe>
+        `;
+
+        container.appendChild(div);
+      });
+
+    })
+    .catch(err => {
+      console.error(err);
+      container.innerHTML = '<p>Gagal memuat video.</p>';
+    });
+}
+
+
+
+/* ======================
+BUKU
+====================== */
+
+function renderBooks(data, containerId){
+
+  const container = document.getElementById(containerId);
+
+  if(!data.length){
+    container.innerHTML = "Tidak ada buku";
+    return;
+  }
+
+  const viewerId = "bookViewer_" + containerId;
+
+  container.innerHTML = `
+    <div class="book-grid"></div>
+    <div id="${viewerId}" style="margin-top:20px;"></div>
+  `;
+
+  const grid = container.querySelector(".book-grid");
+
+  data.forEach((b) => {
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "book-item";
+
+    // Thumbnail buku
+    const img = document.createElement("img");
+
+    img.src =
+      b.thumb ||
+      `https://drive.google.com/thumbnail?id=${b.id}&sz=w500`;
+
+    img.alt = b.judul;
+
+    // Tombol buka buku
+    const btn = document.createElement("button");
+
+    btn.textContent = "📖 " + b.judul;
+
+    btn.addEventListener("click", () => {
+
+      openBookEmbed(
+        b.link || `https://drive.google.com/file/d/${b.id}/preview`,
+        b.judul,
+        viewerId
+      );
+
+    });
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(btn);
+
+    grid.appendChild(wrapper);
+
+  });
+}
+function openBookEmbed(link, judul, viewerId){
+
+  const viewer =
+    document.getElementById(viewerId);
+
+  if(!viewer) return;
+
+  viewer.innerHTML = `
+
+    <h3 style="
+      text-align:center;
+      margin-top:20px;
+    ">
+      ${escapeHtml(judul)}
+    </h3>
+
+    <div style="
+      text-align:center;
+      margin-bottom:15px;
+    ">
+
+      <a
+        href="${link}"
+        target="_blank"
+        style="
+          display:inline-block;
+          padding:10px 18px;
+          background:#4CAF50;
+          color:#fff;
+          text-decoration:none;
+          border-radius:10px;
+          font-weight:bold;
+        ">
+
+        📖 Buka Buku
+
+      </a>
+
+    </div>
+
+    <iframe
+      src="${link}"
+      style="
+        width:100%;
+        height:80vh;
+        border:2px solid #ccc;
+        border-radius:12px;
+        background:#fff;
+      "
+      allow="autoplay"
+      loading="lazy">
+    </iframe>
+
+  `;
+
+  viewer.scrollIntoView({
+    behavior:'smooth'
+  });
+}
+
+function escapeHtml(text){
+
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+/* ======================
+LOAD SHEET
+====================== */
+
+async function loadSheet(gid, title) {
+
+  showPage("data-section");
+
+  document.getElementById("menu-title")
+    .textContent = title;
+
+  document.getElementById("table-container")
+    .innerHTML = "Memuat data...";
+
+  try {
+
+    const response =
+      await fetch(
+        apiUrl + "?gid=" + gid
+      );
+
+    const result =
+      await response.json();
+
+    if (!result.success) {
+
+      document.getElementById("table-container")
+        .innerHTML =
+        "❌ " + result.error;
+
+      return;
+    }
+
+    renderTable(result.data, title);
+
+  } catch (err) {
+
+    console.error(err);
+
+    document.getElementById("table-container")
+      .innerHTML =
+      "❌ Gagal memuat tabel";
+  }
+}
+/* ======================
+RENDER TABLE
+====================== */
+
+function renderTable(data, title) {
+
+  if (!data || !data.length) {
+
+    document.getElementById("table-container")
+      .innerHTML =
+      "Tidak ada data";
+
+    return;
+  }
+
+  let html =
+    `<table id="data-table">
+      <thead>
+      <tr>`;
+
+  data[0].forEach(h => {
+
+    html += `<th>${escapeHtml(h)}</th>`;
+
+  });
+
+  html += `</tr></thead><tbody>`;
+
+  for (let i = 1; i < data.length; i++) {
+
+    html += "<tr>";
+
+    data[i].forEach(col => {
+
+      html += `<td>${escapeHtml(col)}</td>`;
+
+    });
+
+    html += "</tr>";
+  }
+
+  html += "</tbody></table>";
+
+  document.getElementById("table-container")
+    .innerHTML = html;
+
+  document.getElementById("info")
+    .innerHTML =
+    `${title} — ${data.length - 1} baris`;
+}
+
+/* ======================
+FILTER
+====================== */
+
+function filterTable(){
+
+  const input =
+    document.getElementById("search-box")
+    .value
+    .toLowerCase();
+
+  const trs =
+    document.querySelectorAll("#data-table tbody tr");
+
+  trs.forEach(tr=>{
+
+    tr.style.display =
+      tr.innerText.toLowerCase().includes(input)
+      ? ""
+      : "none";
+  });
+}
+/* ========================
+   LATIHAN FIX FULL API
+======================== */
+
+async function Latihan() {
+
+  showPage('latihanPage');
+
+  try {
+
+    const res = await fetch(apiUrl + "?action=latihan");
+
+    const result = await res.json();
+
+    console.log("LATIHAN:", result);
+
+    if (!result.success) {
+      document.getElementById('kelasContainer').innerHTML =
+        "❌ Error: " + (result.error || "unknown");
+      return;
+    }
+
+    latihanData = result.data || [];
+
+    if (latihanData.length === 0) {
+      document.getElementById('kelasContainer').innerHTML =
+        "📭 Data latihan kosong";
+      return;
+    }
+
+    tampilKelas();
+
+  } catch (err) {
+
+    console.error(err);
+
+    document.getElementById('kelasContainer').innerHTML =
+      "❌ Gagal mengambil data latihan";
+  }
+}
+
+      function tampilKelas() {
+        const container = document.getElementById('kelasContainer');
+        container.innerHTML = "<h3>Pilih Kelas:</h3>";
+        const kelasList = Array.from(new Set((latihanData||[]).map(r => r.KELAS))).filter(Boolean).sort();
+        if (kelasList.length === 0) container.innerHTML += "<p>Belum ada data kelas.</p>";
+        kelasList.forEach(k => {
+          const btn = document.createElement('button');
+          btn.className = 'button';
+          btn.textContent = k;
+          btn.onclick = () => pilihKelas(k);
+          container.appendChild(btn);
+        });
+
+        document.getElementById('kelasContainer').classList.remove('hidden');
+        document.getElementById('mapelContainer').classList.add('hidden');
+        document.getElementById('judulContainer').classList.add('hidden');
+        document.getElementById('linkContainer').classList.add('hidden');
+      }
+
+      function pilihKelas(kelas) {
+        selectedKelas = kelas;
+        const mapelContainer = document.getElementById('mapelContainer');
+        mapelContainer.innerHTML = `<h3>📘 Kelas ${escapeHtml(kelas)} – Pilih Mapel:</h3>`;
+        const mapelList = Array.from(new Set((latihanData||[]).filter(r => r.KELAS === kelas).map(r => r.MAPEL))).filter(Boolean).sort();
+        if (mapelList.length === 0) mapelContainer.innerHTML += "<p>Belum ada mapel.</p>";
+        mapelList.forEach(m => {
+          const btn = document.createElement('button');
+          btn.className = 'button';
+          btn.textContent = m;
+          btn.onclick = () => pilihMapel(m);
+          mapelContainer.appendChild(btn);
+        });
+
+        // tombol kembali & menu berdampingan
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.gap = '10px';
+        div.style.justifyContent = 'center';
+        div.style.flexWrap = 'wrap';
+        div.style.marginTop = '12px';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = '⬅️ Kembali ke Halaman Kelas';
+        prevBtn.onclick = kembaliKeKelas;
+        div.appendChild(prevBtn);
+
+        
+
+        mapelContainer.appendChild(div);
+
+        document.getElementById('kelasContainer').classList.add('hidden');
+        mapelContainer.classList.remove('hidden');
+        document.getElementById('judulContainer').classList.add('hidden');
+        document.getElementById('linkContainer').classList.add('hidden');
+      }
+
+      function kembaliKeKelas() { tampilKelas(); }
+
+      function pilihMapel(mapel) {
+        selectedMapel = mapel;
+        const judulContainer = document.getElementById('judulContainer');
+        judulContainer.innerHTML = `<h3>📖 Mapel ${escapeHtml(mapel)} – Pilih Judul:</h3>`;
+
+        const judulList = (latihanData||[]).filter(r => r.KELAS === selectedKelas && r.MAPEL === mapel).map(r => r.JUDUL).filter(Boolean);
+        if (judulList.length === 0) judulContainer.innerHTML += "<p>Belum ada judul.</p>";
+        judulList.forEach(j => {
+          const btn = document.createElement('button');
+          btn.className = 'button';
+          btn.textContent = j;
+          btn.onclick = () => tampilLink(j);
+          judulContainer.appendChild(btn);
+        });
+
+        // tombol kembali & menu
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.gap = '10px';
+        div.style.justifyContent = 'center';
+        div.style.flexWrap = 'wrap';
+        div.style.marginTop = '12px';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
+        prevBtn.onclick = () => pilihKelas(selectedKelas);
+        div.appendChild(prevBtn);
+
+        
+
+        judulContainer.appendChild(div);
+
+        document.getElementById('mapelContainer').classList.add('hidden');
+        judulContainer.classList.remove('hidden');
+        document.getElementById('linkContainer').classList.add('hidden');
+      }
+
+      function tampilLink(judul) {
+        const data = (latihanData||[]).find(r => r.KELAS === selectedKelas && r.MAPEL === selectedMapel && r.JUDUL === judul) || {};
+        const container = document.getElementById('linkContainer');
+        container.innerHTML = `
+          <h3>📘 Kelas ${escapeHtml(selectedKelas)}</h3>
+          <p><b>Mapel:</b> ${escapeHtml(selectedMapel)}</p>
+          <p><b>Judul:</b> ${escapeHtml(judul)}</p>
+          <div style="text-align:center; margin-top:.5rem;">
+            <button class="button" onclick="window.open('${(data.LINK||'#')}', '_blank')">Buka Form / Soal</button>
+          </div>
+        `;
+
+        // tombol kembali & menu
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.gap = '10px';
+        div.style.justifyContent = 'center';
+        div.style.flexWrap = 'wrap';
+        div.style.marginTop = '12px';
+
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
+        prevBtn.onclick = () => pilihKelas(selectedKelas);
+        div.appendChild(prevBtn);
+
+        
+
+        container.appendChild(div);
+
+        document.getElementById('judulContainer').classList.add('hidden');
+        container.classList.remove('hidden');
+      }
+
+
+/* ======================
+GAME
+====================== */
+
+function btnMain(){
+
+  showPage("gamePage");
+
+  loadGames();
+}
+
+function loadGames(){
+
+  const c =
+    document.getElementById("gameContainer");
+
+  if(!gamesData.length){
+
+    c.innerHTML =
+      "Tidak ada game";
+
+    return;
+  }
+
+  c.innerHTML =
+    gamesData.map(g=>`
+
+      <button
+      onclick="bukaGame('${g.link}','${g.judul}')">
+
+      ${g.judul}
+
+      </button>
+
+    `).join("");
+}
+
+function bukaGame(link,judul){
+
+  document.getElementById("gameContainer")
+    .innerHTML = `
+
+    <h3>${judul}</h3>
+
+    <div class="game-frame">
+
+      <iframe
+      src="${link}"
+      allowfullscreen>
+      </iframe>
+
+    </div>
+
+    <button onclick="loadGames()">
+    ⬅️ Kembali
+    </button>
+  `;
+}
+
+/* ======================
+NAVIGATION
+====================== */
+
+function showPage(id){
+
+  document
+    .querySelectorAll(".container")
+    .forEach(el=>el.classList.add("hidden"));
+
+  document
+    .getElementById(id)
+    .classList.remove("hidden");
+}
+
+function showDataMenu(){
+  showPage("menu-section");
+}
+
+function backToMenu(){
+  showPage("menu-section");
+}
+
+function btnTeks(){
+  showPage("teksPage");
+}
+
+function btnSiswa(){
+  showPage("siswaPage");
+}
+    function tampilkanTabel(data) {
+
+      if(!data || data.length === 0){
+
+        document.getElementById("tableContainer").innerHTML =
+          "Tidak ada data";
+
+        return;
+      }
+
+      let html =
+        `<div class="table-wrapper">
+          <table>`;
+
+      // HEADER
+      html += "<tr>";
+
+      data[0].forEach(header => {
+
+        html += `<th>${header}</th>`;
+
+      });
+
+      html += "</tr>";
+
+      // DATA
+      for(let i = 1; i < data.length; i++){
+
+        html += "<tr>";
+
+        data[i].forEach(col => {
+
+          html += `<td>${col}</td>`;
+
+        });
+
+        html += "</tr>";
+      }
+
+      html += `
+          </table>
+        </div>`;
+
+      document.getElementById("tableContainer").innerHTML =
+        html;
+    }
+
+/* ======================
+EXIT
+====================== */
+
+function exitApp(){
+
+  if(confirm("Keluar aplikasi?")){
+
+    window.location.href =
+      "about:blank";
+  }
+}
+
+function getSheetByGid(gid){
+
+  const ss =
+    SpreadsheetApp.openById(
+      '14V4eCElJUCjix2n3-BaYwjj38PmcWyNfLsYxi-szJYY'
+    );
+
+  const sheets = ss.getSheets();
+
+  for(let i=0;i<sheets.length;i++){
+
+    if(String(sheets[i].getSheetId()) === String(gid)){
+
+      return sheets[i]
+        .getDataRange()
+        getDisplayValues();
+    }
+  }
+
+  return [];
+}
+
+/* ======================
+ESCAPE HTML
+====================== */
+
+function escapeHtml(text){
+
+  return String(text || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
+
+/* ======================
+START
+====================== */
+
+window.onload = ()=>{
+
+  loadAllData();
+
+};
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
