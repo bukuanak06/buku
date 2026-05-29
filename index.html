@@ -1020,6 +1020,19 @@ async function loadAllData(){
       "siswaContainer"
     );
 
+cekDanMunculkanTombol();
+
+  }catch(err){
+
+    console.error(err);
+
+    document.getElementById("caption")
+      .textContent =
+      "❌ Gagal memuat data";
+  }
+}
+    
+    
   }catch(err){
 
     console.error(err);
