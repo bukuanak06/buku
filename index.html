@@ -1136,43 +1136,6 @@ function loadAnnouncements(data){
 }
 
 
-/* ========================
-   FUNGSI AMBIL LINK OTOMATIS
-======================== */
-async function cekDanMunculkanTombol() {
-  const container = document.getElementById("tombol-dinamis-container");
-  // Pastikan kontainer bersih saat awal loading
-  container.innerHTML = ""; 
-
-  try {
-    // Memanggil API Apps Script dengan action=getlink
-    const response = await fetch(apiUrl + "?action=getlink");
-    const result = await response.json();
-    
-    // JIKA LINK ADA DAN VALID, BUAT TOMBOLNYA DI SINI
-    if (result.success && result.url) {
-      const btn = document.createElement("button");
-      btn.innerHTML = "🔗 Buka Tautan Otomatis";
-      btn.style.background = "linear-gradient(135deg, #11998e, #38ef7d)";
-      btn.style.boxShadow = "0 8px 20px rgba(56,239,125,.25)";
-      btn.style.marginBottom = "15px";
-      
-      // Jika tombol diklik, langsung buka url tersebut di tab baru
-      btn.onclick = function() {
-        window.open(result.url, '_blank');
-      };
-      
-      // Masukkan tombol ke dalam kontainer HTML
-      container.appendChild(btn);
-    } else {
-      // Jika kosong / tidak ada link, biarkan container tetap kosong (putih semata)
-      console.log("Tombol tidak dimunculkan karena link di Spreadsheet kosong atau tidak valid.");
-    }
-  } catch (err) {
-    console.error("Gagal mengecek link dinamis:", err);
-  }
-}
-
   
 /* ======================
 VIDEO
