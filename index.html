@@ -1599,37 +1599,45 @@ async function Latihan() {
       }
 
       function tampilLink(judul) {
-        const data = (latihanData||[]).find(r => r.KELAS === selectedKelas && r.MAPEL === selectedMapel && r.JUDUL === judul) || {};
-        const container = document.getElementById('linkContainer');
-        container.innerHTML = `
-          <h3>📘 Kelas ${escapeHtml(selectedKelas)}</h3>
-          <p><b>Mapel:</b> ${escapeHtml(selectedMapel)}</p>
-          <p><b>Judul:</b> ${escapeHtml(judul)}</p>
-          <div style="text-align:center; margin-top:.5rem;">
-            <button class="button" onclick="window.open('${(data.LINK||'#')}', '_blank')">Buka Form / Soal</button>
-          </div>
-        `;
+  // Memastikan data ditemukan atau fallback ke objek kosong
+  const data = (latihanData || []).find(r => r.KELAS === selectedKelas && r.MAPEL === selectedMapel && r.JUDUL === judul) || {};
+  
+  // Mengamankan URL atau fallback ke '#' jika tidak ada link
+  const amanLink = data.LINK ? escapeHtml(data.LINK) : '#';
 
-        // tombol kembali & menu
-        const div = document.createElement('div');
-        div.style.display = 'flex';
-        div.style.gap = '10px';
-        div.style.justifyContent = 'center';
-        div.style.flexWrap = 'wrap';
-        div.style.marginTop = '12px';
+  const container = document.getElementById('linkContainer');
+  
+  // Mengganti button dengan tag <a> yang di-style mirip button untuk keamanan XSS yang lebih baik
+  container.innerHTML = `
+    <h3>📘 Kelas ${escapeHtml(selectedKelas)}</h3>
+    <p><b>Mapel:</b> ${escapeHtml(selectedMapel)}</p>
+    <p><b>Judul:</b> ${escapeHtml(judul)}</p>
+    <div style="text-align:center; margin-top:.5rem;">
+      <a href="${amanLink}" target="_blank" rel="noopener noreferrer" class="button" style="text-decoration: none; display: inline-block;">
+        Buka Form / Soal
+      </a>
+    </div>
+  `;
 
-        const prevBtn = document.createElement('button');
-        prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
-        prevBtn.onclick = () => pilihKelas(selectedKelas);
-        div.appendChild(prevBtn);
+  // Tombol kembali & menu
+  const div = document.createElement('div');
+  div.style.display = 'flex';
+  div.style.gap = '10px';
+  div.style.justifyContent = 'center';
+  div.style.flexWrap = 'wrap';
+  div.style.marginTop = '12px';
 
-        
+  const prevBtn = document.createElement('button');
+  prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
+  prevBtn.onclick = () => pilihKelas(selectedKelas);
+  div.appendChild(prevBtn);
 
-        container.appendChild(div);
+  container.appendChild(div);
 
-        document.getElementById('judulContainer').classList.add('hidden');
-        container.classList.remove('hidden');
-      }
+  // Sembunyikan & Tampilkan kontainer terkait
+  document.getElementById('judulContainer').classList.add('hidden');
+  container.classList.remove('hidden');
+}
 
 
 /* ======================
