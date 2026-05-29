@@ -1016,53 +1016,66 @@ if(!response.ok){
       data.bukuSiswa || [],
       "siswaContainer"
     );
-const container =
-  document.getElementById("getLink");
+ const container =
+      document.getElementById("getLink");
 
-if(container){
+    if(container){
 
-  container.innerHTML = "";
+      container.innerHTML = "";
 
-  const linkUrl =
-    data.data?.link || data.link;
+      const linkUrl =
+        data.data?.link || data.link;
 
-  if(linkUrl){
+      console.log("LINK URL:", linkUrl);
 
-    const btn =
-      document.createElement("button");
+      if(linkUrl){
 
-    btn.innerHTML =
-      "🔗 Buka Link";
+        const btn =
+          document.createElement("button");
 
-    btn.style.background =
-      "linear-gradient(135deg,#11998e,#38ef7d)";
+        btn.innerHTML =
+          "🔗 Buka Link";
 
-    btn.style.boxShadow =
-      "0 8px 20px rgba(56,239,125,.25)";
+        btn.style.background =
+          "linear-gradient(135deg,#11998e,#38ef7d)";
 
-    btn.style.marginBottom =
-      "15px";
+        btn.style.boxShadow =
+          "0 8px 20px rgba(56,239,125,.25)";
 
-    btn.onclick = function(){
+        btn.style.marginBottom =
+          "15px";
 
-      window.open(
-        linkUrl,
-        "_blank"
-      );
-    };
+        btn.onclick = function(){
 
-    container.appendChild(btn);
+          window.open(
+            linkUrl,
+            "_blank"
+          );
+        };
 
-  }else{
+        container.appendChild(btn);
 
-    container.innerHTML =
-      "<p>kosong</p>";
+      }else{
 
-    console.log("LINK TIDAK ADA");
-    console.log(data);
+        container.innerHTML =
+          "<p>kosong</p>";
+
+        console.log("LINK TIDAK ADA");
+        console.log(data);
+      }
+    }
+
+  }catch(err){
+
+    console.error(err);
+
+    document.getElementById("caption")
+      .textContent =
+      "❌ Gagal memuat data";
   }
-}    
-/* ======================
+}  
+  
+  /* ======================
 FOTO
 ====================== */
 
