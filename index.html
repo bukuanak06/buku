@@ -402,9 +402,6 @@ img{
   white-space:pre-wrap;
 }
 
-
-
-      
 /* =========================================================
    SEARCH BOX
 ========================================================= */
@@ -841,9 +838,7 @@ and (max-width:950px){
 </div>
 </div>     
   
-      <div style="text-align:center; margin-top:1rem;"> 
-<div id="tombol-dinamis-container"></div>
-        
+      <div style="text-align:center; margin-top:1rem;">
         <button onclick="showDataMenu()">➡️ Lihat Data</button>
         <button onclick="exitApp()">🚪 Exit</button>
         <p>
@@ -1020,33 +1015,15 @@ async function loadAllData(){
       "siswaContainer"
     );
 
-const container = document.getElementById("tombol-dinamis-container");
-    container.innerHTML = ""; // Bersihkan kontainer di awal
+  }catch(err){
 
-    // Cek apakah data.link ada isinya (tidak kosong)
-    if (data.link) { 
-      const btn = document.createElement("button");
-      btn.innerHTML = "🔗 Buka Tautan Otomatis";
-      btn.style.background = "linear-gradient(135deg, #11998e, #38ef7d)";
-      btn.style.boxShadow = "0 8px 20px rgba(56,239,125,.25)";
-      btn.style.marginBottom = "15px";
-      
-      // Jika tombol diklik, langsung buka url tersebut di tab baru
-      btn.onclick = function() {
-        window.open(data.link, '_blank');
-      };
-      
-      // Masukkan tombol ke dalam kontainer HTML
-      container.appendChild(btn);
-    } else {
-      console.log("Tombol kosong/putih semata karena tidak ada link di spreadsheet.");
-    }
-
-  } catch(err) {
     console.error(err);
-    document.getElementById("caption").textContent = "❌ Gagal memuat data";
+
+    document.getElementById("caption")
+      .textContent =
+      "❌ Gagal memuat data";
   }
-} 
+}
 
 /* ======================
 FOTO
@@ -1135,8 +1112,6 @@ function loadAnnouncements(data){
   `).join("");
 }
 
-
-  
 /* ======================
 VIDEO
 ====================== */
@@ -1562,45 +1537,37 @@ async function Latihan() {
       }
 
       function tampilLink(judul) {
-  // Memastikan data ditemukan atau fallback ke objek kosong
-  const data = (latihanData || []).find(r => r.KELAS === selectedKelas && r.MAPEL === selectedMapel && r.JUDUL === judul) || {};
-  
-  // Mengamankan URL atau fallback ke '#' jika tidak ada link
-  const amanLink = data.LINK ? escapeHtml(data.LINK) : '#';
+        const data = (latihanData||[]).find(r => r.KELAS === selectedKelas && r.MAPEL === selectedMapel && r.JUDUL === judul) || {};
+        const container = document.getElementById('linkContainer');
+        container.innerHTML = `
+          <h3>📘 Kelas ${escapeHtml(selectedKelas)}</h3>
+          <p><b>Mapel:</b> ${escapeHtml(selectedMapel)}</p>
+          <p><b>Judul:</b> ${escapeHtml(judul)}</p>
+          <div style="text-align:center; margin-top:.5rem;">
+            <button class="button" onclick="window.open('${(data.LINK||'#')}', '_blank')">Buka Form / Soal</button>
+          </div>
+        `;
 
-  const container = document.getElementById('linkContainer');
-  
-  // Mengganti button dengan tag <a> yang di-style mirip button untuk keamanan XSS yang lebih baik
-  container.innerHTML = `
-    <h3>📘 Kelas ${escapeHtml(selectedKelas)}</h3>
-    <p><b>Mapel:</b> ${escapeHtml(selectedMapel)}</p>
-    <p><b>Judul:</b> ${escapeHtml(judul)}</p>
-    <div style="text-align:center; margin-top:.5rem;">
-      <a href="${amanLink}" target="_blank" rel="noopener noreferrer" class="button" style="text-decoration: none; display: inline-block;">
-        Buka Form / Soal
-      </a>
-    </div>
-  `;
+        // tombol kembali & menu
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.gap = '10px';
+        div.style.justifyContent = 'center';
+        div.style.flexWrap = 'wrap';
+        div.style.marginTop = '12px';
 
-  // Tombol kembali & menu
-  const div = document.createElement('div');
-  div.style.display = 'flex';
-  div.style.gap = '10px';
-  div.style.justifyContent = 'center';
-  div.style.flexWrap = 'wrap';
-  div.style.marginTop = '12px';
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
+        prevBtn.onclick = () => pilihKelas(selectedKelas);
+        div.appendChild(prevBtn);
 
-  const prevBtn = document.createElement('button');
-  prevBtn.textContent = '⬅️ Kembali ke Halaman Mapel';
-  prevBtn.onclick = () => pilihKelas(selectedKelas);
-  div.appendChild(prevBtn);
+        
 
-  container.appendChild(div);
+        container.appendChild(div);
 
-  // Sembunyikan & Tampilkan kontainer terkait
-  document.getElementById('judulContainer').classList.add('hidden');
-  container.classList.remove('hidden');
-}
+        document.getElementById('judulContainer').classList.add('hidden');
+        container.classList.remove('hidden');
+      }
 
 
 /* ======================
@@ -1774,7 +1741,18 @@ function getSheetByGid(gid){
   return [];
 }
 
+/* ======================
+ESCAPE HTML
+====================== */
 
+function escapeHtml(text){
+
+  return String(text || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;");
+}
 
 /* ======================
 START
