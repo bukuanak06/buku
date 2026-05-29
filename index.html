@@ -1016,6 +1016,60 @@ if(!response.ok){
       data.bukuSiswa || [],
       "siswaContainer"
     );
+const container =
+      document.getElementById("getLink");
+
+    if(container){
+
+      container.innerHTML = "";
+
+      if(
+        data.link &&
+        Array.isArray(data.link) &&
+        data.link.length > 0
+      ){
+
+        data.link.forEach(item => {
+
+          // skip jika URL kosong
+          if(!item.url) return;
+
+          const btn =
+            document.createElement("button");
+
+          btn.innerHTML =
+            "🔗 " +
+            escapeHtml(
+              item.judul || "Buka Link"
+            );
+
+          btn.style.background =
+            "linear-gradient(135deg, #11998e, #38ef7d)";
+
+          btn.style.boxShadow =
+            "0 8px 20px rgba(56,239,125,.25)";
+
+          btn.style.marginBottom =
+            "15px";
+
+          btn.onclick = function(){
+
+            window.open(
+              item.url,
+              "_blank"
+            );
+          };
+
+          container.appendChild(btn);
+
+        });
+
+      }else{
+
+        container.innerHTML =
+          "kosong";
+      }
+    }
 
   }catch(err){
 
@@ -1026,7 +1080,6 @@ if(!response.ok){
       "❌ Gagal memuat data";
   }
 }
-
 /* ======================
 FOTO
 ====================== */
