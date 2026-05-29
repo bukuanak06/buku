@@ -402,6 +402,10 @@ img{
   white-space:pre-wrap;
 }
 
+<button onclick="bukaLinkOtomatis()" style="background: linear-gradient(135deg, #11998e, #38ef7d); box-shadow: 0 8px 20px rgba(56,239,125,.25);">
+</button>
+
+      
 /* =========================================================
    SEARCH BOX
 ========================================================= */
@@ -1112,6 +1116,33 @@ function loadAnnouncements(data){
   `).join("");
 }
 
+
+/* ========================
+   FUNGSI AMBIL LINK OTOMATIS
+======================== */
+async function bukaLinkOtomatis() {
+  // Membuat notifikasi loading pop-up sederhana bawaan browser
+  alert("Sedang mengambil tautan terbaru dari Spreadsheet, mohon tunggu...");
+  
+  try {
+    // Memanggil API URL Apps Script kamu dengan parameter tambahan ?action=getlink
+    const response = await fetch(apiUrl + "?action=getlink");
+    const result = await response.json();
+    
+    if (result.success && result.url) {
+      // Mengarahkan tab browser baru langsung ke URL Canva/link yang didapat
+      window.open(result.url, '_blank');
+    } else {
+      alert("❌ Gagal: " + (result.error || "Link tidak ditemukan atau kosong."));
+    }
+  } catch (err) {
+    console.error(err);
+    alert("❌ Terjadi kesalahan jaringan saat mengambil data link.");
+  }
+}
+
+
+  
 /* ======================
 VIDEO
 ====================== */
