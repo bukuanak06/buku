@@ -14,21 +14,23 @@
 
 <!-- Facebook / Open Graph (Dipakai saat link di-share) -->
 <meta property="og:type" content="website" />
-
+<meta property="og:url" content="https://perpustakaan-sdn-balimester-06.github.io/Balimester-o6/">
 <meta property="og:title" content="📚 Perpustakaan SDN Balimester 06 – Ki Hajar Dewantara" />
 <meta property="og:description" content="Koleksi kegiatan pembelajaran mendalam untuk murid dan guru." />
-
-
+<!-- REKOMENDASI: Ganti link Imgur ke link internal website Netlify kamu jika masih eror hitam -->
+<meta property="og:image" content="https://perpustakaan-sdn-balimester-06.github.io/Balimester-o6/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 
 <!-- Verifikasi & Pengaturan Browser -->
 
+    <meta name="google-site-verification" content="5yAluWOIzZpFAYUNmJpmoar_X1df5gFlYkJjcB9MBWo" />
 <meta name="screen-orientation" content="auto" />
-<meta property="og:image" content="LINK_GAMBAR" />
-<meta property="og:url" content="URL_WEBSITE" />
-<link rel="icon" href="favicon.png">
 
+<!-- Favicon / Icon Website -->
+<link rel="icon" href="https://https://perpustakaan-sdn-balimester-06.github.io/Balimester-o6/favicon.png" type="image/png" />
+
+    <link rel="icon" href="favicon.png">
 
     <style>
       /* === RESPONSIVE TAMBAHAN UNTUK HP DAN TABLET === */
@@ -987,7 +989,7 @@ and (max-width:950px){
 <script>
 
 const apiUrl =
-"https://script.google.com/macros/s/AKfycbyIROqZOHDTEoer29IWATXuBfsG8zijIQ-hlpn4scF-t6qqpgSAU6rUmKEdGhisnJZQeg/exec";
+"https://script.google.com/macros/s/AKfycbwTBxH2g2OfBxzKUX7qKMj_J1e0HjanpruEe6OcWiAwBVub7-5i2ipdQVg2B97B4SxfOw/exec";
 
 
 const spreadsheetId =
@@ -1814,13 +1816,50 @@ function getSheetByGid(gid){
 START
 ====================== */
 
+/* ======================
+START
+====================== */
+
 window.addEventListener("load", loadAllData);
 
+/* Disable Klik Kanan */
+document.addEventListener("contextmenu", function(e){
+  e.preventDefault();
+});
+
+/* Disable Shortcut DevTools */
+document.addEventListener("keydown", function(e){
+
+  // F12
+  if(e.key === "F12"){
+    e.preventDefault();
+  }
+
+  // Ctrl + Shift + I
+  if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i"){
+    e.preventDefault();
+  }
+
+  // Ctrl + Shift + J
+  if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j"){
+    e.preventDefault();
+  }
+
+  // Ctrl + U
+  if(e.ctrlKey && e.key.toLowerCase() === "u"){
+    e.preventDefault();
+  }
+
+  // Ctrl + Shift + C
+  if(e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c"){
+    e.preventDefault();
+  }
+
+});  
 </script>
 
 </body>
 </html>
-
 
 
 
