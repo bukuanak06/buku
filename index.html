@@ -1017,54 +1017,36 @@ if(!response.ok){
       "siswaContainer"
     );
  const container =
-      document.getElementById("getLink");
+  document.getElementById("getLink");
 
-    if(container){
+if(container){
 
-      container.innerHTML = "";
+  container.innerHTML = "";
 
-      const linkUrl =
-        data.link || data.link;
+  if(data.link){
 
-      console.log("LINK URL:", linkUrl);
+    const btn =
+      document.createElement("button");
 
-      if(linkUrl){
+    btn.innerHTML =
+      "🔗 Buka Link";
 
-        const btn =
-          document.createElement("button");
+    btn.onclick = function(){
 
-        btn.innerHTML =
-          "🔗 Buka Link";
+      window.open(
+        data.link,
+        "_blank"
+      );
+    };
 
-        btn.style.background =
-          "linear-gradient(135deg,#11998e,#38ef7d)";
+    container.appendChild(btn);
 
-        btn.style.boxShadow =
-          "0 8px 20px rgba(56,239,125,.25)";
+  }else{
 
-        btn.style.marginBottom =
-          "15px";
-
-        btn.onclick = function(){
-
-          window.open(
-            linkUrl,
-            "_blank"
-          );
-        };
-
-        container.appendChild(btn);
-
-      }else{
-
-        container.innerHTML =
-          "<p>kosong</p>";
-
-        console.log("LINK TIDAK ADA");
-        console.log(data);
-      }
-    }
-
+    container.innerHTML =
+      "<p>kosong</p>";
+  }
+}
   }catch(err){
 
     console.error(err);
