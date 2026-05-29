@@ -1017,69 +1017,47 @@ if(!response.ok){
       "siswaContainer"
     );
 const container =
-      document.getElementById("getLink");
+  document.getElementById("getLink");
 
-    if(container){
+if(container){
 
-      container.innerHTML = "";
+  container.innerHTML = "";
 
-      if(
-        data.link &&
-        Array.isArray(data.link) &&
-        data.link.length > 0
-      ){
+  // cek jika link ada
+  if(data.link){
 
-        data.link.forEach(item => {
+    const btn =
+      document.createElement("button");
 
-          // skip jika URL kosong
-          if(!item.url) return;
+    btn.innerHTML =
+      "🔗 Buka Link";
 
-          const btn =
-            document.createElement("button");
+    btn.style.background =
+      "linear-gradient(135deg, #11998e, #38ef7d)";
 
-          btn.innerHTML =
-            "🔗 " +
-            escapeHtml(
-              item.judul || "Buka Link"
-            );
+    btn.style.boxShadow =
+      "0 8px 20px rgba(56,239,125,.25)";
 
-          btn.style.background =
-            "linear-gradient(135deg, #11998e, #38ef7d)";
+    btn.style.marginBottom =
+      "15px";
 
-          btn.style.boxShadow =
-            "0 8px 20px rgba(56,239,125,.25)";
+    btn.onclick = function(){
 
-          btn.style.marginBottom =
-            "15px";
+      window.open(
+        data.link,
+        "_blank"
+      );
+    };
 
-          btn.onclick = function(){
+    container.appendChild(btn);
 
-            window.open(
-              item.url,
-              "_blank"
-            );
-          };
+  }else{
 
-          container.appendChild(btn);
-
-        });
-
-      }else{
-
-        container.innerHTML =
-          "kosong";
-      }
-    }
-
-  }catch(err){
-
-    console.error(err);
-
-    document.getElementById("caption")
-      .textContent =
-      "❌ Gagal memuat data";
+    container.innerHTML =
+      "<p>Tidak ada link.</p>";
   }
-}
+} 
+    
 /* ======================
 FOTO
 ====================== */
